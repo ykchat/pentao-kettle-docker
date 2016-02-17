@@ -11,3 +11,5 @@ RUN apt-get clean
 RUN mkdir /usr/src/pentaho
 WORKDIR /usr/src/pentaho
 RUN wget --progress=dot:giga http://downloads.sourceforge.net/project/pentaho/Data%20Integration/6.0/pdi-ce-6.0.1.0-386.zip
+RUN unzip pdi-ce-6.0.1.0-386.zip
+RUN rm pdi-ce-6.0.1.0-386.zip
