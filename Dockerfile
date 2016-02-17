@@ -13,3 +13,11 @@ WORKDIR /usr/src/pentaho
 RUN wget --progress=dot:giga http://downloads.sourceforge.net/project/pentaho/Data%20Integration/6.0/pdi-ce-6.0.1.0-386.zip
 RUN unzip pdi-ce-6.0.1.0-386.zip
 RUN rm pdi-ce-6.0.1.0-386.zip
+
+WORKDIR data-integration
+ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
+
+EXPOSE 8080
+
+ENTRYPOINT ["./carte.sh", "0.0.0.0", "8080"]
+CMD []
